@@ -95,8 +95,19 @@ module.exports = {
     loaders: [
       // Process JS with Babel.
       {
+        /* <<NOTES>>
+         * The `test` key, is used to check whether webpack should apply this module to the file being tested.
+         * In this case, the regex below returns true only for files ending with .js or .jsx.
+         */
         test: /\.(js|jsx)$/,
+        /* <<NOTES>>
+         * `include`, tells webpack to only run this module in the specified directory.
+         * paths.appSrc is an imported variable defined in paths.js that ultimately returns the path to the src directory.
+         */
         include: paths.appSrc,
+        /* <<NOTES>>
+         * `loader`, is the name of the node module, which should be located inside node_modules.
+         */
         loader: 'babel',
         query: {
           
