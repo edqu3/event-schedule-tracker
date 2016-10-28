@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {PageHeader} from 'react-bootstrap'
+import {PageHeader, Button} from 'react-bootstrap'
 
 class Container extends Component {
 
@@ -42,6 +42,12 @@ class Header extends Component {
     return (
       <PageHeader>Event,
         <small>Next Event @ {this.state.data}</small>
+        <Button bsStyle="primary" >Butt on</Button>
+        <Button bsStyle="success" >Butt on</Button>
+        <Button bsStyle="info" >Butt on</Button>
+        <Button bsStyle="warning" >Butt on</Button>
+        <Button bsStyle="danger" >Butt on</Button>
+        <Button bsStyle="link" >Butt on</Button>
       </PageHeader>
     );
   }
